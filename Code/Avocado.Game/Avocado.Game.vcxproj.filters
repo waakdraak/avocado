@@ -13,6 +13,36 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\Commands">
+      <UniqueIdentifier>{623f85ed-f61a-4f5a-895c-49549369d497}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Commands">
+      <UniqueIdentifier>{e397b6af-1d76-4883-9f70-fc375ba502f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Models">
+      <UniqueIdentifier>{aa866a8a-1301-4cca-ad66-285e9466ebc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Models">
+      <UniqueIdentifier>{faa60b36-b1d7-4e93-b9ab-18d794a134af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Animation">
+      <UniqueIdentifier>{c57eaf7e-d1c1-4dab-9cb8-30dbdbb0fafe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Animation">
+      <UniqueIdentifier>{fc5f3b58-43d6-4a4f-a8d6-741541e0f387}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Models\Board">
+      <UniqueIdentifier>{a0085a54-f15c-4bab-a5d9-b1f92a4e5a12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Models\Board">
+      <UniqueIdentifier>{0083b76a-19f2-4edc-873a-137fdb4a5f0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Models\Tiles">
+      <UniqueIdentifier>{db02116f-73af-4f73-9097-bdababffcd8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Models\Tiles">
+      <UniqueIdentifier>{e07db2a6-d3cb-4f6d-b3e4-16896b613b8e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -24,13 +54,73 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="KingMoveCommand.h">
+      <Filter>Header Files\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandBase.h">
+      <Filter>Header Files\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="KingMoveAnimation.h">
+      <Filter>Header Files\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="King.h">
+      <Filter>Header Files\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Men.h">
+      <Filter>Header Files\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Board.h">
+      <Filter>Header Files\Models\Board</Filter>
+    </ClInclude>
+    <ClInclude Include="BoardStateBase.h">
+      <Filter>Header Files\Models\Board</Filter>
+    </ClInclude>
+    <ClInclude Include="BoardStateReady.h">
+      <Filter>Header Files\Models\Board</Filter>
+    </ClInclude>
+    <ClInclude Include="Tile.h">
+      <Filter>Header Files\Models\Tiles</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="game.cpp">
+    <ClCompile Include="KingMoveCommand.cpp">
+      <Filter>Source Files\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandBase.cpp">
+      <Filter>Source Files\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="KingMoveAnimation.cpp">
+      <Filter>Source Files\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="King.cpp">
+      <Filter>Source Files\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Men.cpp">
+      <Filter>Source Files\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Board.cpp">
+      <Filter>Source Files\Models\Board</Filter>
+    </ClCompile>
+    <ClCompile Include="BoardStateBase.cpp">
+      <Filter>Source Files\Models\Board</Filter>
+    </ClCompile>
+    <ClCompile Include="BoardStateReady.cpp">
+      <Filter>Source Files\Models\Board</Filter>
+    </ClCompile>
+    <ClCompile Include="Tile.cpp">
+      <Filter>Source Files\Models\Tiles</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

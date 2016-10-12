@@ -1,5 +1,5 @@
 // stdafx.cpp : source file that includes just the standard includes
-// avocado.models.pch will be the pre-compiled header
+// Avocado.Game.Tests.pch will be the pre-compiled header
 // stdafx.obj will contain the pre-compiled type information
 
 #include "stdafx.h"

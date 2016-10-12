@@ -23,6 +23,7 @@
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>AvocadoGame</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>Avocado.Game</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -109,7 +110,7 @@
       <PreprocessorDefinitions>
       </PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Projects\Repos\avocado\Code\avocado.models;C:\Projects\Repos\avocado\Lib\SFML-2.4.0\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\Repos\avocado\Lib\SFML-2.4.0\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -162,22 +163,37 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Board.h" />
+    <ClInclude Include="BoardStateBase.h" />
+    <ClInclude Include="BoardStateReady.h" />
+    <ClInclude Include="CommandBase.h" />
+    <ClInclude Include="King.h" />
+    <ClInclude Include="KingMoveAnimation.h" />
+    <ClInclude Include="KingMoveCommand.h" />
+    <ClInclude Include="Men.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="Tile.h" />
+    <ClInclude Include="Game.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="game.cpp" />
+    <ClCompile Include="Board.cpp" />
+    <ClCompile Include="BoardStateBase.cpp" />
+    <ClCompile Include="BoardStateReady.cpp" />
+    <ClCompile Include="CommandBase.cpp" />
+    <ClCompile Include="King.cpp" />
+    <ClCompile Include="KingMoveAnimation.cpp" />
+    <ClCompile Include="KingMoveCommand.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Men.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\avocado.models\avocado.models.vcxproj">
-      <Project>{7b75b300-544a-4d1d-b9ff-11ea68031eb4}</Project>
-    </ProjectReference>
+    <ClCompile Include="Tile.cpp" />
+    <ClCompile Include="Game.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
