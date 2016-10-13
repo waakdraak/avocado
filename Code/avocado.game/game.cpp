@@ -1,9 +1,13 @@
-#include "stdafx.h"
+#include "Game.h"
 #include <SFML/Graphics.hpp>
 
 
-int main()
+Game::Game(Board board)
 {
+}
+
+void Game::Run() {
+
 	sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
 	sf::CircleShape shape(100.f);
 	shape.setFillColor(sf::Color::Green);
@@ -17,11 +21,12 @@ int main()
 				window.close();
 		}
 
-		window.clear();   
+		window.clear();
 		window.draw(shape);
 		window.display();
 	}
-	 
-	return 0;
 }
 
+Game::~Game()
+{
+}
