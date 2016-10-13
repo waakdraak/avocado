@@ -1,7 +1,14 @@
 #include "tile.h"
 
-Tile::Tile(int horizontalStartPosition, int verticalStartPosition, int width, int height)
+Tile::Tile()
 {
+}
+
+void Tile::SetStone(StoneBase stone) {
+}
+
+StoneBase Tile::GetStone() {
+	return StoneBase();
 }
 
 Tile::~Tile()

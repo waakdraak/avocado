@@ -1,4 +1,5 @@
 #pragma once
+#include "StoneBase.h"
 
 enum TileColour
 {
@@ -10,15 +11,13 @@ class Tile
 {
 
 private:
-	int horizontalStartPosition;
-	int verticalStartPosition;
-	int width;
-	int height;
 
 public:
-	Tile(int horizontalStartPosition, int verticalStartPosition, int width, int height);
+	Tile();
 
-
+	void SetStone(StoneBase stone);
+	
+	StoneBase GetStone();
 
 	~Tile();
 };

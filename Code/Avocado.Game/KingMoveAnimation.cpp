@@ -2,7 +2,7 @@
 
 
 
-KingMoveAnimation::KingMoveAnimation()
+KingMoveAnimation::KingMoveAnimation(GameContext context)
 {
 }
 

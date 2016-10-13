@@ -54,9 +54,6 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="KingMoveCommand.h">
-      <Filter>Header Files\Commands</Filter>
-    </ClInclude>
     <ClInclude Include="CommandBase.h">
       <Filter>Header Files\Commands</Filter>
     </ClInclude>
@@ -84,13 +81,22 @@
     <ClInclude Include="Tile.h">
       <Filter>Header Files\Models\Tiles</Filter>
     </ClInclude>
+    <ClInclude Include="GameContext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StoneBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BoardStateStoneSelected.h">
+      <Filter>Header Files\Models\Board</Filter>
+    </ClInclude>
+    <ClInclude Include="MoveCommand.h">
+      <Filter>Header Files\Commands</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="KingMoveCommand.cpp">
-      <Filter>Source Files\Commands</Filter>
     </ClCompile>
     <ClCompile Include="CommandBase.cpp">
       <Filter>Source Files\Commands</Filter>
@@ -121,6 +127,18 @@
     </ClCompile>
     <ClCompile Include="Tile.cpp">
       <Filter>Source Files\Models\Tiles</Filter>
+    </ClCompile>
+    <ClCompile Include="GameContext.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StoneBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BoardStateStoneSelected.cpp">
+      <Filter>Source Files\Models\Board</Filter>
+    </ClCompile>
+    <ClCompile Include="MoveCommand.cpp">
+      <Filter>Source Files\Commands</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

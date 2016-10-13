@@ -166,12 +166,15 @@
     <ClInclude Include="Board.h" />
     <ClInclude Include="BoardStateBase.h" />
     <ClInclude Include="BoardStateReady.h" />
+    <ClInclude Include="BoardStateStoneSelected.h" />
     <ClInclude Include="CommandBase.h" />
+    <ClInclude Include="GameContext.h" />
     <ClInclude Include="King.h" />
     <ClInclude Include="KingMoveAnimation.h" />
-    <ClInclude Include="KingMoveCommand.h" />
+    <ClInclude Include="MoveCommand.h" />
     <ClInclude Include="Men.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="StoneBase.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Tile.h" />
     <ClInclude Include="Game.h" />
@@ -180,10 +183,12 @@
     <ClCompile Include="Board.cpp" />
     <ClCompile Include="BoardStateBase.cpp" />
     <ClCompile Include="BoardStateReady.cpp" />
+    <ClCompile Include="BoardStateStoneSelected.cpp" />
     <ClCompile Include="CommandBase.cpp" />
+    <ClCompile Include="GameContext.cpp" />
     <ClCompile Include="King.cpp" />
     <ClCompile Include="KingMoveAnimation.cpp" />
-    <ClCompile Include="KingMoveCommand.cpp" />
+    <ClCompile Include="MoveCommand.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Men.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -192,6 +197,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="StoneBase.cpp" />
     <ClCompile Include="Tile.cpp" />
     <ClCompile Include="Game.cpp" />
   </ItemGroup>

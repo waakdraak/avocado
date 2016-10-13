@@ -1,8 +1,10 @@
 #pragma once
+#include "GameContext.h"
+
 class KingMoveAnimation
 {
 public:
-	KingMoveAnimation();
+	KingMoveAnimation(GameContext context);
 	void Animate();
 	~KingMoveAnimation();
 };

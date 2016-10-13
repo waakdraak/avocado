@@ -1,12 +1,12 @@
-#include "stdafx.h"
 #include "BoardStateBase.h"
 
 
-BoardStateBase::BoardStateBase()
+BoardStateBase::BoardStateBase(std::vector<CommandBase> commandList): CommandList(commandList)
 {
+
 }
 
-void BoardStateBase::Select()
+void BoardStateBase::Select(Tile tile, StoneBase stone)
 {
 }
 

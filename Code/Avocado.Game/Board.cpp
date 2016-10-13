@@ -6,11 +6,15 @@ Board::Board()
 }
 
 Tile Board::GetTile(int x, int y) {
-	return Tile(1,1,1,1);
+	return Tile();
 }
 
 void Board::Select(int x, int y) {
-	_boardState.Select();
+
+	auto selectedTile = GetTile(x, y);
+	auto selectedStone = selectedTile.GetStone();
+
+	_boardState.Select(selectedTile, selectedStone);
 }
 
 Board::~Board()
