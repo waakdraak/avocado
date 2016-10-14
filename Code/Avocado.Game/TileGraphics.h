@@ -4,6 +4,7 @@
 
 class TileGraphics : public TileGraphicsBase
 {
+
 public:
 	TileGraphics(GameTexture &tileTexture, int height, int width, int horizontalOffset, int verticalOffset);
 
