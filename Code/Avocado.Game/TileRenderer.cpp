@@ -19,7 +19,7 @@ std::vector< std::vector<Tile> > TileRenderer::RenderTiles() {
 
 		for (int horizontal = 0; horizontal< 8; horizontal++) {
 
-			tileCollection[horizontal].push_back(_tileFactory.Create(isBlack, _tileHeight, _tileWidth, (horizontal + 1) * _tileWidth, (_tileHeight + 1) * vertical));
+			tileCollection[vertical].push_back(_tileFactory.Create(isBlack, _tileHeight, _tileWidth, (horizontal + 1) * _tileWidth, (_tileHeight + 1) * vertical));
 			isBlack = true;
 
 		}

@@ -1,8 +1,10 @@
 #include "board.h"
 
+//
+
 Board::Board(TileRenderer &tileRenderer) : _tileCollection(tileRenderer.RenderTiles())
 {
-
+	auto x = tileRenderer.RenderTiles();
 }
 
 Tile Board::GetTile(int x, int y) {
