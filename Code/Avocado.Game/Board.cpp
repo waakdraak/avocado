@@ -1,12 +1,13 @@
 #include "board.h"
 
-Board::Board() 
+Board::Board(TileRenderer &tileRenderer) : _tileCollection(tileRenderer.RenderTiles())
 {
 
 }
 
 Tile Board::GetTile(int x, int y) {
-	return Tile();
+
+	return _tileCollection[1][1];
 }
 
 void Board::Select(int x, int y) {

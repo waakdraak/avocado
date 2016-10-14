@@ -169,6 +169,7 @@
     <ClInclude Include="BoardStateStoneSelected.h" />
     <ClInclude Include="CommandBase.h" />
     <ClInclude Include="GameContext.h" />
+    <ClInclude Include="GameTexture.h" />
     <ClInclude Include="King.h" />
     <ClInclude Include="KingMoveAnimation.h" />
     <ClInclude Include="MoveCommand.h" />
@@ -178,6 +179,10 @@
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Tile.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="TileFactory.h" />
+    <ClInclude Include="TileGraphics.h" />
+    <ClInclude Include="TileGraphicsBase.h" />
+    <ClInclude Include="TileRenderer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Board.cpp" />
@@ -186,6 +191,7 @@
     <ClCompile Include="BoardStateStoneSelected.cpp" />
     <ClCompile Include="CommandBase.cpp" />
     <ClCompile Include="GameContext.cpp" />
+    <ClCompile Include="GameTexture.cpp" />
     <ClCompile Include="King.cpp" />
     <ClCompile Include="KingMoveAnimation.cpp" />
     <ClCompile Include="MoveCommand.cpp" />
@@ -200,6 +206,10 @@
     <ClCompile Include="StoneBase.cpp" />
     <ClCompile Include="Tile.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="TileFactory.cpp" />
+    <ClCompile Include="TileGraphics.cpp" />
+    <ClCompile Include="TileGraphicsBase.cpp" />
+    <ClCompile Include="TileRenderer.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

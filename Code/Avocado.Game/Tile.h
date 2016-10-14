@@ -1,4 +1,5 @@
 #pragma once
+#include "TileGraphics.h"
 #include "StoneBase.h"
 
 enum TileColour
@@ -13,7 +14,7 @@ class Tile
 private:
 
 public:
-	Tile();
+	Tile(TileGraphics tileGraphics);
 
 	void SetStone(StoneBase stone);
 	
