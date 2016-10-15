@@ -168,6 +168,7 @@
     <ClInclude Include="BoardStateReady.h" />
     <ClInclude Include="BoardStateStoneSelected.h" />
     <ClInclude Include="CommandBase.h" />
+    <ClInclude Include="DrawableCollection.h" />
     <ClInclude Include="GameContext.h" />
     <ClInclude Include="GameTexture.h" />
     <ClInclude Include="King.h" />
@@ -190,6 +191,7 @@
     <ClCompile Include="BoardStateReady.cpp" />
     <ClCompile Include="BoardStateStoneSelected.cpp" />
     <ClCompile Include="CommandBase.cpp" />
+    <ClCompile Include="DrawableCollection.cpp" />
     <ClCompile Include="GameContext.cpp" />
     <ClCompile Include="GameTexture.cpp" />
     <ClCompile Include="King.cpp" />

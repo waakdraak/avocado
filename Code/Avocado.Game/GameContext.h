@@ -1,12 +1,16 @@
 #pragma once
+#include "DrawableCollection.h"
 #include <SFML/Graphics.hpp>
 
 class GameContext
 {
 private: 
-	sf::RenderWindow _window;
+	DrawableCollection _drawableCollection;
 public:
-	GameContext(sf::RenderWindow window);
+	GameContext(DrawableCollection& drawableCollection);
+
+	DrawableCollection& GetDrawableCollection();
+
 	~GameContext();
 };
 

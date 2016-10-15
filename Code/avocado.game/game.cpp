@@ -1,14 +1,15 @@
 #include "Game.h"
+
 #include <SFML/Graphics.hpp>
 
 
-Game::Game(Board board)
+Game::Game(Board& board, GameContext& context):_board(board), _context(context)
 {
 }
 
 void Game::Run() {
 
-	sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
+	sf::RenderWindow window(sf::VideoMode(500, 500), "SFML works!");
 	sf::CircleShape shape(100.f);
 	shape.setFillColor(sf::Color::Green);
 
@@ -22,7 +23,14 @@ void Game::Run() {
 		}
 
 		window.clear();
-		window.draw(shape);
+
+		auto drawables = _context.GetDrawableCollection().GetAll();
+
+		for (std::vector<sf::RectangleShape>::iterator it = drawables.begin(); it != drawables.end(); ++it) {
+			window.draw(*it);
+
+		}
+	
 		window.display();
 	}
 }

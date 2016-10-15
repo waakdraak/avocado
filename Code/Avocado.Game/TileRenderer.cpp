@@ -19,7 +19,11 @@ std::vector< std::vector<Tile> > TileRenderer::RenderTiles() {
 
 		for (int horizontal = 0; horizontal< 8; horizontal++) {
 
-			tileCollection[vertical].push_back(_tileFactory.Create(isBlack, _tileHeight, _tileWidth, (horizontal + 1) * _tileWidth, (_tileHeight + 1) * vertical));
+			tileCollection[vertical].push_back(*_tileFactory.Create(isBlack, 
+				_tileHeight, 
+				_tileWidth,
+				static_cast<float>(horizontal + 1) * _tileWidth, 
+				static_cast<float>(_tileHeight + 1) * vertical));
 			isBlack = true;
 
 		}
@@ -31,4 +35,5 @@ std::vector< std::vector<Tile> > TileRenderer::RenderTiles() {
 
 TileRenderer::~TileRenderer()
 {
+	//clean up tiles
 }

@@ -2,10 +2,13 @@
 #include "GameContext.h"
 
 
-GameContext::GameContext(sf::RenderWindow window)
+GameContext::GameContext(DrawableCollection& drawableCollection) : _drawableCollection(drawableCollection)
 {
 }
 
+DrawableCollection& GameContext::GetDrawableCollection() {
+	return _drawableCollection;
+}
 
 GameContext::~GameContext()
 {

@@ -12,12 +12,12 @@ class Tile
 {
 
 private:
-	TileGraphics _tileGraphics;
+	TileGraphics* _tileGraphics;
 
 public:
-	Tile(TileGraphics tileGraphics);
+	Tile(TileGraphics* tileGraphics);
 
-	TileGraphics GetGraphics();
+	TileGraphics& GetGraphics();
 
 	void SetStone(StoneBase stone);
 	
