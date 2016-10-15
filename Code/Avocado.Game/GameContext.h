@@ -1,15 +1,19 @@
 #pragma once
-#include "DrawableCollection.h"
+#include <vector>
+#include "GameEntity.h"
 #include <SFML/Graphics.hpp>
 
 class GameContext
 {
 private: 
-	DrawableCollection _drawableCollection;
-public:
-	GameContext(DrawableCollection& drawableCollection);
+	std::vector<GameEntity*> _gameEntities;
 
-	DrawableCollection& GetDrawableCollection();
+public:
+	GameContext();
+
+	void AddGameEntity(GameEntity* gameEntity);
+
+	std::vector<GameEntity*>& GetGameEntities();
 
 	~GameContext();
 };

@@ -2,12 +2,17 @@
 #include "GameContext.h"
 
 
-GameContext::GameContext(DrawableCollection& drawableCollection) : _drawableCollection(drawableCollection)
+GameContext::GameContext()
 {
 }
 
-DrawableCollection& GameContext::GetDrawableCollection() {
-	return _drawableCollection;
+
+void GameContext::AddGameEntity(GameEntity* gameEntity) {
+	_gameEntities.push_back(gameEntity);
+}
+
+std::vector<GameEntity*>& GameContext::GetGameEntities() {
+	return _gameEntities;
 }
 
 GameContext::~GameContext()

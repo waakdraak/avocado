@@ -9,7 +9,7 @@ private:
 
 public:
 	DrawableCollection();
-	std::vector<sf::RectangleShape> GetAll();
+	std::vector<sf::RectangleShape>& GetAll();
 	void AddDrawable(sf::RectangleShape& drawable);
 	~DrawableCollection();
 };

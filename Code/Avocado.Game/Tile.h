@@ -1,4 +1,7 @@
 #pragma once
+#include <SFML/Graphics.hpp>
+#include "GameEntity.h"
+#include "GameContext.h"
 #include "TileGraphics.h"
 #include "StoneBase.h"
 
@@ -8,20 +11,16 @@ enum TileColour
 	White
 };
 
-class Tile
+class Tile : public GameEntity
 {
 
 private:
-	TileGraphics* _tileGraphics;
+	TileGraphics& _tileGraphics;
 
 public:
-	Tile(TileGraphics* tileGraphics);
+	Tile(GameTexture &tileTexture, int height, int width, float horizontalOffset, float verticalOffset, GameContext& context);
 
-	TileGraphics& GetGraphics();
-
-	void SetStone(StoneBase stone);
-	
-	StoneBase GetStone();
+	sf::RectangleShape& GetSprite();
 
 	~Tile();
 };

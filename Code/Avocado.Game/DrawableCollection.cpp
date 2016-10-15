@@ -6,7 +6,7 @@ DrawableCollection::DrawableCollection()
 {
 }
 
-std::vector<sf::RectangleShape> DrawableCollection::GetAll() {
+std::vector<sf::RectangleShape>& DrawableCollection::GetAll() {
 	return _drawableCollection;
 }
 

@@ -8,14 +8,8 @@ TileFactory::TileFactory(GameTexture &blackTexture, GameTexture &whiteTexture, G
 
 Tile* TileFactory::Create(bool isBlack, int height, int width, float horizontalOffset, float verticalOffset) {
 
-	// tile gfx unique pointer or smart pointer
-
-	auto result = isBlack ? new Tile(new TileGraphics(_blackTexture,height,width,horizontalOffset,verticalOffset)) : 
-		new Tile(new TileGraphics(_whiteTexture, height, width, horizontalOffset, verticalOffset));
-
-	auto drawable = result->GetGraphics().GetDrawable();
-
-	_context.GetDrawableCollection().AddDrawable(drawable);
+	auto result = isBlack ? new Tile(_blackTexture,height,width,horizontalOffset,verticalOffset, _context) : 
+		new Tile(_whiteTexture, height, width, horizontalOffset, verticalOffset, _context);
 
 	return result;
 }

@@ -11,11 +11,13 @@ private:
 	sf::RectangleShape _sprite;
 
 public:
-	TileGraphics(GameTexture &tileTexture, int height, int width, float horizontalOffset, float verticalOffset);
+	TileGraphics(GameTexture &tileTexture);
 
 	sf::RectangleShape& GetDrawable();
 
-	void SetOrigin();
+	void SetOffset(float horizontalOffset, float verticalOffset);
+
+	void SetSize(int height, int width);
 
 	~TileGraphics();
 };

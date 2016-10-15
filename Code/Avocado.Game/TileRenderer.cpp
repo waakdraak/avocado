@@ -6,20 +6,21 @@ TileRenderer::TileRenderer(TileFactory tileFactory, int boardHeight, int boardWi
 {
 }
 
-std::vector< std::vector<Tile> > TileRenderer::RenderTiles() {
+std::vector< std::vector<Tile*> > TileRenderer::RenderTiles() {
 	auto horizontalOffset = 0;
 	auto verticalOffset = 0;
 
-	std::vector< std::vector<Tile> > tileCollection;
+	std::vector< std::vector<Tile*> > tileCollection;
 
 	for (int vertical = 0; vertical< 8; vertical++) {
 
 		auto isBlack = false;
-		tileCollection.push_back(std::vector<Tile>());
+
+		tileCollection.push_back(std::vector<Tile*>());
 
 		for (int horizontal = 0; horizontal< 8; horizontal++) {
 
-			tileCollection[vertical].push_back(*_tileFactory.Create(isBlack, 
+			tileCollection[vertical].push_back(_tileFactory.Create(isBlack, 
 				_tileHeight, 
 				_tileWidth,
 				static_cast<float>(horizontal + 1) * _tileWidth, 

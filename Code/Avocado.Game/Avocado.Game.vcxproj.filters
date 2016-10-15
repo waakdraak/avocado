@@ -108,7 +108,7 @@
     <ClInclude Include="TileRenderer.h">
       <Filter>Header Files\Models\Tiles</Filter>
     </ClInclude>
-    <ClInclude Include="DrawableCollection.h">
+    <ClInclude Include="GameEntity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -173,7 +173,7 @@
     <ClCompile Include="TileRenderer.cpp">
       <Filter>Source Files\Models\Tiles</Filter>
     </ClCompile>
-    <ClCompile Include="DrawableCollection.cpp">
+    <ClCompile Include="GameEntity.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

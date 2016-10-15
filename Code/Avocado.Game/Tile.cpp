@@ -1,19 +1,18 @@
 #include "tile.h"
 
-Tile::Tile(TileGraphics* tileGraphics) : _tileGraphics(tileGraphics)
+Tile::Tile(GameTexture &tileTexture, int height, int width, float horizontalOffset, float verticalOffset, GameContext& context):  _tileGraphics(TileGraphics(tileTexture))
 {
+	
+	_tileGraphics.SetOffset(horizontalOffset, verticalOffset);
+	_tileGraphics.SetSize(height, width);
+	context.AddGameEntity(this);
 }
 
-TileGraphics& Tile::GetGraphics() {
-	return *_tileGraphics;
+sf::RectangleShape& Tile::GetSprite() {
+	return _tileGraphics.GetDrawable();
 }
 
-void Tile::SetStone(StoneBase stone) {
-}
 
-StoneBase Tile::GetStone() {
-	return StoneBase();
-}
 
 Tile::~Tile()
 {

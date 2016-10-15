@@ -4,20 +4,17 @@
 
 Board::Board(TileRenderer &tileRenderer) : _tileCollection(tileRenderer.RenderTiles())
 {
-	auto x = tileRenderer.RenderTiles();
+
 }
 
 Tile Board::GetTile(int x, int y) {
-
-	return _tileCollection[1][1];
+	return *_tileCollection[1][1];
 }
 
 void Board::Select(int x, int y) {
 
 	auto selectedTile = GetTile(x, y);
-	auto selectedStone = selectedTile.GetStone();
-
-	_boardState.Select(selectedTile, selectedStone);
+	//_boardState.Select(selectedTile, selectedStone);
 }
 
 Board::~Board()

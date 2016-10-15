@@ -1,5 +1,5 @@
 #include "Game.h"
-
+#include "GameEntity.h"
 #include <SFML/Graphics.hpp>
 
 
@@ -24,12 +24,12 @@ void Game::Run() {
 
 		window.clear();
 
-		auto drawables = _context.GetDrawableCollection().GetAll();
+		auto drawables = _context.GetGameEntities();
 
-		for (std::vector<sf::RectangleShape>::iterator it = drawables.begin(); it != drawables.end(); ++it) {
-			window.draw(*it);
-
-		}
+		for (std::vector<GameEntity*>::iterator it = drawables.begin(); it != drawables.end(); ++it) {
+			
+			window.draw((*it)->GetSprite());
+		};
 	
 		window.display();
 	}
