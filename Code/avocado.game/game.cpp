@@ -25,8 +25,6 @@ void Game::Run() {
 
 		window.clear();
 
-		auto x = (*_context.GetGameEntities()[0]).GetSprite();
-
 		for (std::vector<GameEntity*>::iterator it = _context.GetGameEntities().begin(); it != _context.GetGameEntities().end(); ++it) {
 
 			window.draw((*(*it)).GetSprite());

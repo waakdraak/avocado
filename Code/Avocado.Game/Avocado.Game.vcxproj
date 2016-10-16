@@ -183,7 +183,6 @@
     <ClInclude Include="TileFactory.h" />
     <ClInclude Include="TileGraphics.h" />
     <ClInclude Include="TileGraphicsBase.h" />
-    <ClInclude Include="TileRenderer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Board.cpp" />
@@ -211,7 +210,6 @@
     <ClCompile Include="TileFactory.cpp" />
     <ClCompile Include="TileGraphics.cpp" />
     <ClCompile Include="TileGraphicsBase.cpp" />
-    <ClCompile Include="TileRenderer.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

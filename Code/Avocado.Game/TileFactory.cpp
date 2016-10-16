@@ -6,7 +6,7 @@ TileFactory::TileFactory(GameTexture &blackTexture, GameTexture &whiteTexture, G
 {
 }
 
-Tile* TileFactory::Create(bool isBlack, int height, int width, float horizontalOffset, float verticalOffset) {
+Tile* TileFactory::Create(bool isBlack, float height, float width, float horizontalOffset, float verticalOffset) {
 
 	auto result = isBlack ? new Tile(_blackTexture,height,width,horizontalOffset,verticalOffset, _context) : 
 		new Tile(_whiteTexture, height, width, horizontalOffset, verticalOffset, _context);

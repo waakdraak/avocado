@@ -14,7 +14,7 @@ private:
 public:
 	TileFactory(GameTexture &blackTexture, GameTexture &whiteTexture, GameContext &context);
 	
-	Tile* Create(bool isBlack, int height, int width, float horizontalOffset, float verticalOffset);
+	Tile* Create(bool isBlack, float height, float width, float horizontalOffset, float verticalOffset);
 
 	~TileFactory();
 };

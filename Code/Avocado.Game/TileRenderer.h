@@ -5,6 +5,8 @@
 class TileRenderer
 {
 private :
+
+	std::vector< std::vector<Tile*> > _tileCollection;
 	TileFactory _tileFactory;
 	int _tileHeight;
 	int _tileWidth;

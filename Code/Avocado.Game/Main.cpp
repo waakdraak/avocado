@@ -11,8 +11,7 @@ int main()
 	GameTexture blackTexture;
 	GameTexture whiteTexture;
 	TileFactory tileFactory = TileFactory(blackTexture, whiteTexture, context);
-	TileRenderer tileRenderer(tileFactory, 200, 200);
-	Board board(tileRenderer);
+	Board board(tileFactory,500,500);
 	Game game(board, context);
 
 	game.Run();
