@@ -3,20 +3,17 @@
 #include <vector>
 #include "TileGraphicsBase.h"
 #include "TileGraphics.h"
-#include "TileRenderer.h"
 #include "CommandBase.h"
 #include "tile.h"
 #include "TileFactory.h"
 #include "BoardStateBase.h"
-
-
 
 class Board
 {
 private :
 	
 	std::vector<CommandBase> _commandList;
-	std::vector< std::vector<Tile*> > _tileCollection;
+	std::vector< std::vector<std::shared_ptr<Tile> > > _tileCollection;
 	TileFactory _tileFactory;
 	float _tileHeight;
 	float _tileWidth;

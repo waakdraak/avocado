@@ -1,4 +1,5 @@
 #pragma once
+#include <memory>
 #include "Tile.h"
 #include "GameContext.h"
 #include "GameTexture.h"
@@ -14,7 +15,7 @@ private:
 public:
 	TileFactory(GameTexture &blackTexture, GameTexture &whiteTexture, GameContext &context);
 	
-	Tile* Create(bool isBlack, float height, float width, float horizontalOffset, float verticalOffset);
+	std::shared_ptr<Tile> Create(bool isBlack, float height, float width, float horizontalOffset, float verticalOffset);
 
 	~TileFactory();
 };

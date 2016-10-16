@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "TileFactory.h"
 
 
@@ -6,10 +5,10 @@ TileFactory::TileFactory(GameTexture &blackTexture, GameTexture &whiteTexture, G
 {
 }
 
-Tile* TileFactory::Create(bool isBlack, float height, float width, float horizontalOffset, float verticalOffset) {
+std::shared_ptr<Tile> TileFactory::Create(bool isBlack, float height, float width, float horizontalOffset, float verticalOffset) {
 
-	auto result = isBlack ? new Tile(_blackTexture,height,width,horizontalOffset,verticalOffset, _context) : 
-		new Tile(_whiteTexture, height, width, horizontalOffset, verticalOffset, _context);
+	auto result = isBlack ? std::shared_ptr<Tile>(new Tile(_blackTexture,height,width,horizontalOffset,verticalOffset, _context)) : 
+		std::shared_ptr<Tile>(new Tile(_whiteTexture, height, width, horizontalOffset, verticalOffset, _context));
 
 	return result;
 }

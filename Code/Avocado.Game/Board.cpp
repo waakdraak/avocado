@@ -1,10 +1,8 @@
 #include "board.h"
 
-//
-
 Board::Board(TileFactory tileFactory, float boardHeight, float boardWidth) : 
 	_tileFactory(tileFactory), _tileHeight(boardHeight / 8), _tileWidth(boardWidth / 8), 
-	_tileCollection(std::vector< std::vector<Tile*> >()),
+	_tileCollection(std::vector< std::vector<std::shared_ptr<Tile> > >()),
 	_boardHeight(boardHeight), _boardWidth(boardWidth)
 {
 	RenderTiles();
@@ -18,7 +16,7 @@ void Board::RenderTiles() {
 
 		auto isBlack = false;
 
-		_tileCollection.push_back(std::vector<Tile*>());
+		_tileCollection.push_back(std::vector<std::shared_ptr<Tile> >());
 
 		for (int horizontal = 0; horizontal< 8; horizontal++) {
 
