@@ -1,9 +1,10 @@
+#include <memory>
 #include "Game.h"
 #include "GameEntity.h"
 #include <SFML/Graphics.hpp>
 
 
-Game::Game(Board& board, GameContext& context):_board(board), _context(context)
+Game::Game(Board& board, GameContext& context) :_board(board), _context(context)
 {
 }
 
@@ -24,13 +25,13 @@ void Game::Run() {
 
 		window.clear();
 
-		auto drawables = _context.GetGameEntities();
+		auto x = (*_context.GetGameEntities()[0]).GetSprite();
 
-		for (std::vector<GameEntity*>::iterator it = drawables.begin(); it != drawables.end(); ++it) {
-			
-			window.draw((*it)->GetSprite());
+		for (std::vector<GameEntity*>::iterator it = _context.GetGameEntities().begin(); it != _context.GetGameEntities().end(); ++it) {
+
+			window.draw((*(*it)).GetSprite());
 		};
-	
+
 		window.display();
 	}
 }

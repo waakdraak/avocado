@@ -12,7 +12,7 @@ private :
 public:
 	TileRenderer(TileFactory tileFactory, int boardHeight, int boardWidth);
 	
-	std::vector< std::vector<Tile*> > RenderTiles();
+	std::vector< std::vector<Tile*> >* RenderTiles();
 
 	~TileRenderer();
 };

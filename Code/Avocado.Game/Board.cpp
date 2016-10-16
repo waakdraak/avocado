@@ -8,7 +8,7 @@ Board::Board(TileRenderer &tileRenderer) : _tileCollection(tileRenderer.RenderTi
 }
 
 Tile Board::GetTile(int x, int y) {
-	return *_tileCollection[1][1];
+	return *(*_tileCollection)[1][1];
 }
 
 void Board::Select(int x, int y) {

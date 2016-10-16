@@ -6,25 +6,26 @@ TileRenderer::TileRenderer(TileFactory tileFactory, int boardHeight, int boardWi
 {
 }
 
-std::vector< std::vector<Tile*> > TileRenderer::RenderTiles() {
+//mag deze destoryed worden?
+std::vector< std::vector<Tile*> >* TileRenderer::RenderTiles() {
 	auto horizontalOffset = 0;
 	auto verticalOffset = 0;
 
-	std::vector< std::vector<Tile*> > tileCollection;
+	std::vector< std::vector<Tile*> >* tileCollection = new std::vector< std::vector<Tile*> >;
 
 	for (int vertical = 0; vertical< 8; vertical++) {
 
 		auto isBlack = false;
 
-		tileCollection.push_back(std::vector<Tile*>());
+		tileCollection->push_back(std::vector<Tile*>());
 
 		for (int horizontal = 0; horizontal< 8; horizontal++) {
 
-			tileCollection[vertical].push_back(_tileFactory.Create(isBlack, 
-				_tileHeight, 
-				_tileWidth,
-				static_cast<float>(horizontal + 1) * _tileWidth, 
-				static_cast<float>(_tileHeight + 1) * vertical));
+			(*tileCollection)[vertical].push_back(_tileFactory.Create(isBlack, 
+				static_cast<float>(_tileHeight), 
+				static_cast<float>(_tileWidth),
+				static_cast<float>(horizontal) * _tileWidth, 
+				static_cast<float>(_tileHeight) * vertical));
 			isBlack = true;
 
 		}
@@ -36,5 +37,5 @@ std::vector< std::vector<Tile*> > TileRenderer::RenderTiles() {
 
 TileRenderer::~TileRenderer()
 {
-	//clean up tiles
+	//clean up tile collection
 }

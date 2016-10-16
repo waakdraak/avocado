@@ -10,8 +10,8 @@ int main()
 	GameContext context;
 	GameTexture blackTexture;
 	GameTexture whiteTexture;
-	TileFactory* tileFactory = new TileFactory(blackTexture, whiteTexture, context);
-	TileRenderer tileRenderer(*tileFactory, 200, 200);
+	TileFactory tileFactory = TileFactory(blackTexture, whiteTexture, context);
+	TileRenderer tileRenderer(tileFactory, 200, 200);
 	Board board(tileRenderer);
 	Game game(board, context);
 

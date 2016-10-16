@@ -1,12 +1,14 @@
+
+
 #include "stdafx.h"
 #include "TileGraphics.h"
 
 
 TileGraphics::TileGraphics(GameTexture &tileTexture) 
-	: TileGraphicsBase(tileTexture)
+	: TileGraphicsBase(tileTexture),
+	_sprite(sf::RectangleShape(sf::RectangleShape(sf::Vector2f(50, 50))))
 {
-	_sprite = sf::RectangleShape(sf::Vector2f(50, 50));
-	_sprite.setPosition(sf::Vector2f(_horizontalOffset, _verticalOffset));
+	_sprite.setPosition(50.0f, 50.0f);
 	_sprite.setFillColor(sf::Color::Green);
 }
 
@@ -15,11 +17,11 @@ sf::RectangleShape& TileGraphics::GetDrawable() {
 }
 
 void TileGraphics::SetOffset(float horizontalOffset, float verticalOffset) {
-	_sprite.setPosition(sf::Vector2f(_horizontalOffset, _verticalOffset));
+	_sprite.setPosition(sf::Vector2f(horizontalOffset, verticalOffset));
 }
 
-void TileGraphics::SetSize(int height, int width) {
-	_sprite.setSize(sf::Vector2f(_horizontalOffset, _verticalOffset));
+void TileGraphics::SetSize(float height, float width) {
+	_sprite.setSize(sf::Vector2f(height,width));
 }
 
 TileGraphics::~TileGraphics()

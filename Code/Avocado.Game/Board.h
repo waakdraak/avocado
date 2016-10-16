@@ -16,7 +16,7 @@ class Board
 private :
 	
 	std::vector<CommandBase> _commandList;
-	std::vector< std::vector<Tile*> > &_tileCollection;
+	std::vector< std::vector<Tile*> >* _tileCollection;
 
 	BoardStateBase _boardState = BoardStateBase(_commandList);
 

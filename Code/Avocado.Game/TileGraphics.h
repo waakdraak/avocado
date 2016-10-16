@@ -1,4 +1,5 @@
 #pragma once
+#include  <memory>
 #include <SFML/Graphics.hpp>
 #include "TileGraphicsBase.h"
 #include "GameTexture.h"
@@ -8,7 +9,7 @@ class TileGraphics : public TileGraphicsBase
 private:
 	float _horizontalOffset;
 	float _verticalOffset;
-	sf::RectangleShape _sprite;
+    sf::RectangleShape  _sprite;
 
 public:
 	TileGraphics(GameTexture &tileTexture);
@@ -17,7 +18,7 @@ public:
 
 	void SetOffset(float horizontalOffset, float verticalOffset);
 
-	void SetSize(int height, int width);
+	void SetSize(float height, float width);
 
 	~TileGraphics();
 };

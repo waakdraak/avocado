@@ -1,4 +1,6 @@
 #pragma once
+
+#include <memory>
 #include <SFML/Graphics.hpp>
 #include "GameEntity.h"
 #include "GameContext.h"
@@ -15,12 +17,12 @@ class Tile : public GameEntity
 {
 
 private:
-	TileGraphics& _tileGraphics;
+	TileGraphics _tileGraphics;
 
 public:
-	Tile(GameTexture &tileTexture, int height, int width, float horizontalOffset, float verticalOffset, GameContext& context);
+	Tile(GameTexture &tileTexture, float height, float width, float horizontalOffset, float verticalOffset, GameContext& context);
 
-	sf::RectangleShape& GetSprite();
+	sf::RectangleShape GetSprite();
 
 	~Tile();
 };

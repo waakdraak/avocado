@@ -1,6 +1,7 @@
+#include <memory>
 #include "tile.h"
 
-Tile::Tile(GameTexture &tileTexture, int height, int width, float horizontalOffset, float verticalOffset, GameContext& context):  _tileGraphics(TileGraphics(tileTexture))
+Tile::Tile(GameTexture &tileTexture, float height, float width, float horizontalOffset, float verticalOffset, GameContext& context):  _tileGraphics(TileGraphics(tileTexture))
 {
 	
 	_tileGraphics.SetOffset(horizontalOffset, verticalOffset);
@@ -8,11 +9,9 @@ Tile::Tile(GameTexture &tileTexture, int height, int width, float horizontalOffs
 	context.AddGameEntity(this);
 }
 
-sf::RectangleShape& Tile::GetSprite() {
+sf::RectangleShape Tile::GetSprite() {
 	return _tileGraphics.GetDrawable();
 }
-
-
 
 Tile::~Tile()
 {

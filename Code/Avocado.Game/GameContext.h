@@ -1,4 +1,5 @@
 #pragma once
+#include <memory>
 #include <vector>
 #include "GameEntity.h"
 #include <SFML/Graphics.hpp>
@@ -11,7 +12,7 @@ private:
 public:
 	GameContext();
 
-	void AddGameEntity(GameEntity* gameEntity);
+	void AddGameEntity(GameEntity*  gameEntity);
 
 	std::vector<GameEntity*>& GetGameEntities();
 
