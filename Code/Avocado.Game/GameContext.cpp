@@ -6,7 +6,6 @@ GameContext::GameContext()
 {
 }
 
-
 void GameContext::AddGameEntity(GameEntity* gameEntity) {
 
 	_gameEntities.push_back(gameEntity);
