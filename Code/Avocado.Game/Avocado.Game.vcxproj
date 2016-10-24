@@ -27,7 +27,7 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -40,7 +40,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -169,6 +169,8 @@
     <ClInclude Include="BoardStateStoneSelected.h" />
     <ClInclude Include="CommandBase.h" />
     <ClInclude Include="GameContext.h" />
+    <ClInclude Include="GameEntity.h" />
+    <ClInclude Include="GameTexture.h" />
     <ClInclude Include="King.h" />
     <ClInclude Include="KingMoveAnimation.h" />
     <ClInclude Include="MoveCommand.h" />
@@ -178,6 +180,9 @@
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Tile.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="TileFactory.h" />
+    <ClInclude Include="TileGraphics.h" />
+    <ClInclude Include="TileGraphicsBase.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Board.cpp" />
@@ -186,6 +191,8 @@
     <ClCompile Include="BoardStateStoneSelected.cpp" />
     <ClCompile Include="CommandBase.cpp" />
     <ClCompile Include="GameContext.cpp" />
+    <ClCompile Include="GameEntity.cpp" />
+    <ClCompile Include="GameTexture.cpp" />
     <ClCompile Include="King.cpp" />
     <ClCompile Include="KingMoveAnimation.cpp" />
     <ClCompile Include="MoveCommand.cpp" />
@@ -200,6 +207,14 @@
     <ClCompile Include="StoneBase.cpp" />
     <ClCompile Include="Tile.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="TileFactory.cpp" />
+    <ClCompile Include="TileGraphics.cpp" />
+    <ClCompile Include="TileGraphicsBase.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Avocado.Network\Avocado.Network.vcxproj">
+      <Project>{05ff4ebe-f146-4187-8e94-edd621b14e77}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

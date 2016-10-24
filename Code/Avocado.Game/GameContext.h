@@ -1,12 +1,21 @@
 #pragma once
+#include <memory>
+#include <vector>
+#include "GameEntity.h"
 #include <SFML/Graphics.hpp>
 
 class GameContext
 {
 private: 
-	sf::RenderWindow _window;
+	std::vector<GameEntity*> _gameEntities;
+
 public:
-	GameContext(sf::RenderWindow window);
+	GameContext();
+
+	void AddGameEntity(GameEntity*  gameEntity);
+
+	std::vector<GameEntity*>& GetGameEntities();
+
 	~GameContext();
 };
 

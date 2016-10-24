@@ -2,10 +2,18 @@
 #include "GameContext.h"
 
 
-GameContext::GameContext(sf::RenderWindow window)
+GameContext::GameContext()
 {
 }
 
+void GameContext::AddGameEntity(GameEntity* gameEntity) {
+
+	_gameEntities.push_back(gameEntity);
+}
+
+std::vector<GameEntity*>& GameContext::GetGameEntities() {
+	return _gameEntities;
+}
 
 GameContext::~GameContext()
 {
