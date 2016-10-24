@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Avocado.Game.Tests", "Avoca
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Avocado.Network", "Avocado.Network\Avocado.Network.vcxproj", "{05FF4EBE-F146-4187-8E94-EDD621B14E77}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Avocado.Startup", "Avocado.Startup\Avocado.Startup.vcxproj", "{2FDE025A-A00B-4874-85ED-D447C8F3B8CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -57,6 +59,18 @@ Global
 		{05FF4EBE-F146-4187-8E94-EDD621B14E77}.Release|x64.Build.0 = Release|x64
 		{05FF4EBE-F146-4187-8E94-EDD621B14E77}.Release|x86.ActiveCfg = Release|Win32
 		{05FF4EBE-F146-4187-8E94-EDD621B14E77}.Release|x86.Build.0 = Release|Win32
+		{2FDE025A-A00B-4874-85ED-D447C8F3B8CA}.Debug|ARM.ActiveCfg = Debug|Win32
+		{2FDE025A-A00B-4874-85ED-D447C8F3B8CA}.Debug|ARM64.ActiveCfg = Debug|Win32
+		{2FDE025A-A00B-4874-85ED-D447C8F3B8CA}.Debug|x64.ActiveCfg = Debug|x64
+		{2FDE025A-A00B-4874-85ED-D447C8F3B8CA}.Debug|x64.Build.0 = Debug|x64
+		{2FDE025A-A00B-4874-85ED-D447C8F3B8CA}.Debug|x86.ActiveCfg = Debug|Win32
+		{2FDE025A-A00B-4874-85ED-D447C8F3B8CA}.Debug|x86.Build.0 = Debug|Win32
+		{2FDE025A-A00B-4874-85ED-D447C8F3B8CA}.Release|ARM.ActiveCfg = Release|Win32
+		{2FDE025A-A00B-4874-85ED-D447C8F3B8CA}.Release|ARM64.ActiveCfg = Release|Win32
+		{2FDE025A-A00B-4874-85ED-D447C8F3B8CA}.Release|x64.ActiveCfg = Release|x64
+		{2FDE025A-A00B-4874-85ED-D447C8F3B8CA}.Release|x64.Build.0 = Release|x64
+		{2FDE025A-A00B-4874-85ED-D447C8F3B8CA}.Release|x86.ActiveCfg = Release|Win32
+		{2FDE025A-A00B-4874-85ED-D447C8F3B8CA}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
