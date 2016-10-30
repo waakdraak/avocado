@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include <memory>
 #include "Game.h"
 #include "GameEntity.h"

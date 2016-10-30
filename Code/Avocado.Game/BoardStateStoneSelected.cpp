@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "BoardStateStoneSelected.h"
 #include "MoveCommand.h"
 

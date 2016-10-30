@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "board.h"
 
 Board::Board(TileFactory tileFactory, float boardHeight, float boardWidth) : 
