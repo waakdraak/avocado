@@ -32,9 +32,6 @@
     <ClCompile Include="WhenAddingAResource.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="googletry.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

@@ -8,6 +8,6 @@
 int main(int ac, char* av[])
 {
 	testing::InitGoogleTest(&ac, av);
-	return 0;
+	return RUN_ALL_TESTS();
 }
 

@@ -32,5 +32,8 @@
     <ClCompile Include="Avocado.Engine.Tests.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="WhenAddingAResource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
