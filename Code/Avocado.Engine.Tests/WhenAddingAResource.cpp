@@ -5,14 +5,16 @@
 class TextureMock
 {
 public:
-//	MOCK_METHOD1(LoadFromFile, bool (const std::string &filename));
+	MOCK_METHOD1(LoadFromFile, bool(std::string filename));
+	MOCK_METHOD0(Load, bool());
+
 };
 
 class myTest : public testing::Test {
 
 public:
 
-	//TextureMock TextureMock;
+	TextureMock _extureMock;
 
 	virtual void SetUp()
 	{
@@ -22,7 +24,16 @@ public:
 
 TEST_F(myTest, ThenICanRetreiveTheResource)
 {
-	//this->TextureMock;
+	TextureMock _txtureMockaa;
+
+	EXPECT_CALL(this->_extureMock, LoadFromFile(testing::An<std::string>())).WillOnce(testing::Return(true));
+	EXPECT_CALL(this->_extureMock, Load()).WillRepeatedly(testing::Return(true));
+
+	auto u = std::string("fffff");
+
+	auto y = _txtureMockaa.LoadFromFile(u);
+
+	auto z = _txtureMockaa.Load();
 
 	EXPECT_TRUE(4 == 4);
 }
